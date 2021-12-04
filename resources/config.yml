@@ -1,0 +1,3 @@
+ipinfo:
+  access_token: <replace me!>
+  auth_log_dir: "/path/to/logs"
