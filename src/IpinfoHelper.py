@@ -5,18 +5,17 @@ class IpinfoHandler:
     def __init__(self):
         self.access_token = self.readAccessToken()
         self.handler = ipinfo.getHandler(self.access_token)
-        print(self.access_token)
 
     def readIP(self, ip):
-        if self.handler is not null:
+        if self.handler != None:
             self.details = self.handler.getDetails(ip)
 
     def getDetails(self):
-        if self.details is not null:
+        if self.details != None:
             return self.details
     
     def getCountry(self):
-        if self.details is not null:
+        if self.details != None:
             return self.details.country_name
 
     def readAccessToken(self):
