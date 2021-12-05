@@ -14,9 +14,15 @@ class IpinfoHandler:
         if self.details != None:
             return self.details
     
-    def getCountry(self):
+    def getCountryName(self):
         if self.details != None:
             return self.details.country_name
+
+    def getCountryCode(self):
+        if self.details != None and self.details.country_name != None:
+            return self.details.country
+        else:
+            return None
 
     def readAccessToken(self):
         with open("resources/config.yml", "r") as yamlConfig:
